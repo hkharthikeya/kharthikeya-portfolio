@@ -1,34 +1,53 @@
+import { FaGithub, FaLinkedin, FaMicrochip, FaRobot, FaInstagram } from 'react-icons/fa';
+import { MdEmail, MdPhone, MdLocationOn, MdWifi, MdOutlineSpeed } from 'react-icons/md';
+import Image from 'next/image';
+
 export default function Home() {
   return (
     <div className="container" style={{ position: 'relative' }}>
       
-      {/* Decorative Background Elements */}
-      <div className="decorative-wrapper animate-float" style={{ top: '5%', right: '10%' }}>
-        <div className="shape-circle"></div>
-      </div>
-      <div className="decorative-wrapper animate-float delay-2" style={{ top: '15%', left: '-5%' }}>
-        <div className="shape-star">✶</div>
-      </div>
-      <div className="decorative-wrapper animate-float delay-4" style={{ top: '40%', right: '-2%' }}>
-        <div className="shape-star" style={{ color: 'var(--accent-pink)' }}>✺</div>
-      </div>
-
+      
       {/* Hero Section */}
-      <section className="hero-section" style={{ position: 'relative', zIndex: 1 }}>
-        <h1 className="hero-title animate-slide-up">BHIMAVARAPU HRUTHWIK KHARTHIKEYA</h1>
-        <p className="hero-subtitle animate-slide-up delay-1">Electronics & IoT Developer</p>
-
-        <div className="neo-box bg-white animate-slide-up delay-2" style={{ maxWidth: '800px', fontSize: '1.1rem' }}>
-          Curious electronics student with strong interest in exploring practical technology systems and solving real-world problems through engineering solutions. Experienced in building projects across IoT systems, embedded platforms, and web-based tools while actively participating in national hackathons and innovation competitions. Demonstrates strong time management by balancing academic work, project development, and a part-time role in media production. Currently working on Trinetra, an initiative focused on accessible security solutions for IoT environments.
+      <section className="hero-section hero-layout" style={{ position: 'relative', zIndex: 1 }}>
+        <div className="hero-content">
+          <h1 className="hero-title animate-slide-up">BHIMAVARAPU HRUTHWIK KHARTHIKEYA</h1>
+          <p className="hero-subtitle animate-slide-up delay-1">Electronics & IoT Developer</p>
+  
+          <div className="animate-slide-up delay-2" style={{ marginTop: '2rem', marginBottom: '3rem' }}>
+            <p style={{ fontSize: '1.2rem', lineHeight: 1.6, maxWidth: '800px', backgroundColor: 'var(--bg-color)', padding: '1rem', borderLeft: '8px solid var(--accent-magenta)' }}>
+              A highly motivated Electronics & Communication Engineering student pushing the boundaries of hardware design, autonomous systems, and embedded logic. Passionate about turning complex circuitry into functional reality.
+            </p>
+          </div>
+  
+          <div className="contact-links animate-slide-up delay-3">
+            <a href="mailto:bhruthwik536@gmail.com" className="neo-btn neo-btn-cyan" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+              <MdEmail size={20} /> Email Me
+            </a>
+            <a href="https://github.com/hkharthikeya" target="_blank" rel="noreferrer" className="neo-btn neo-btn-magenta" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+              <FaGithub size={20} /> GitHub
+            </a>
+            <a href="https://www.linkedin.com/in/hkharthikeya" target="_blank" rel="noreferrer" className="neo-btn neo-btn-lime" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+              <FaLinkedin size={20} /> LinkedIn
+            </a>
+            <a href="https://www.instagram.com/hkharthikeya" target="_blank" rel="noreferrer" className="neo-btn neo-btn-pink" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+              <FaInstagram size={20} /> Instagram
+            </a>
+            <div className="neo-btn bg-white" style={{ cursor: 'default', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+              <MdPhone size={20} /> +91 9110544685
+            </div>
+            <div className="neo-btn bg-white" style={{ cursor: 'default', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+              <MdLocationOn size={20} /> Hyderabad, India
+            </div>
+          </div>
         </div>
-
-        <div className="contact-links animate-slide-up delay-3">
-          <a href="mailto:bhruthwik536@gmail.com" className="neo-btn neo-btn-cyan">Email Me</a>
-          <a href="#" className="neo-btn neo-btn-magenta">GitHub</a>
-          <a href="#" className="neo-btn neo-btn-lime">LinkedIn</a>
-          <div className="neo-btn bg-white" style={{ cursor: 'default' }}>+91 9110544685</div>
-          <div className="neo-btn bg-white" style={{ cursor: 'default' }}>Hyderabad, India</div>
-        </div>
+        
+        {/* Hero Image */}
+        <img 
+          src="/portfolio/hero_image.webp" 
+          alt="Bhimavarapu Hruthwik Kharthikeya" 
+          className="hero-image-placeholder bg-white animate-slide-up delay-4" 
+          style={{ padding: 0, width: '100%', maxWidth: '400px', height: 'auto', objectFit: 'contain', flexShrink: 0 }} 
+        />
       </section>
 
       {/* Dynamic Marquee */}
@@ -50,16 +69,19 @@ export default function Home() {
         <h2 style={{ display: 'inline-block', backgroundColor: 'var(--accent-cyan)', padding: '0.5rem 1rem', border: 'var(--border-width) solid var(--border-color)', boxShadow: '4px 4px 0px var(--shadow-color)' }}>
           Core Focus
         </h2>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem', marginTop: '2rem' }}>
+        <div className="responsive-grid">
           <div className="neo-box bg-white" style={{ borderTop: '8px solid var(--accent-lime)' }}>
+            <FaMicrochip size={40} style={{ marginBottom: '1rem', color: 'var(--accent-lime)' }} />
             <h3 style={{ fontSize: '1.8rem', marginBottom: '1rem' }}>Hardware Interfacing</h3>
             <p>Designing seamless interactions between physical components and digital logic using microcontrollers like ESP32 and Arduino.</p>
           </div>
           <div className="neo-box bg-white" style={{ borderTop: '8px solid var(--accent-pink)' }}>
+            <FaRobot size={40} style={{ marginBottom: '1rem', color: 'var(--accent-pink)' }} />
             <h3 style={{ fontSize: '1.8rem', marginBottom: '1rem' }}>Autonomous Systems</h3>
             <p>Building intelligent, self-guided drones and vehicles leveraging GPS, telemetry, and real-time computer vision.</p>
           </div>
           <div className="neo-box bg-white" style={{ borderTop: '8px solid var(--accent-yellow)' }}>
+            <MdWifi size={40} style={{ marginBottom: '1rem', color: 'var(--accent-yellow)' }} />
             <h3 style={{ fontSize: '1.8rem', marginBottom: '1rem' }}>IoT Connectivity</h3>
             <p>Connecting edge devices to cloud infrastructure (like Firebase) for real-time monitoring, alerts, and remote control.</p>
           </div>
@@ -152,14 +174,14 @@ export default function Home() {
       </section>
 
       {/* Experience / Timeline */}
-      <section className="animate-slide-up delay-3" style={{ marginBottom: '6rem', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '4rem' }}>
+      <section className="animate-slide-up delay-3 responsive-grid-large" style={{ marginBottom: '6rem' }}>
 
         <div>
           <h2 style={{ display: 'inline-block', backgroundColor: 'var(--accent-cyan)', padding: '0.5rem 1rem', border: 'var(--border-width) solid var(--border-color)', boxShadow: '4px 4px 0px var(--shadow-color)', marginBottom: '2rem' }}>
             Education
           </h2>
-          <div className="timeline-item">
-            <span className="timeline-date">2024–2028</span>
+          <div className="timeline-item" style={{ borderColor: 'var(--accent-magenta)' }}>
+            <span className="timeline-date bg-magenta">2024–2028</span>
             <h4 style={{ marginBottom: '0.2rem' }}>CMR College of Engineering and Technology</h4>
             <p>B.Tech – Electronics and Communication Engineering</p>
             <strong>CGPA: 8.55 / 10</strong>
@@ -178,8 +200,14 @@ export default function Home() {
 
         <div>
           <h2 style={{ display: 'inline-block', backgroundColor: 'var(--accent-yellow)', padding: '0.5rem 1rem', border: 'var(--border-width) solid var(--border-color)', boxShadow: '4px 4px 0px var(--shadow-color)', marginBottom: '2rem' }}>
-            Achievements
+            Experience & Achievements
           </h2>
+          <div className="timeline-item" style={{ borderColor: 'var(--accent-lime)' }}>
+            <span className="timeline-date bg-lime">Mar 2026 - Present</span>
+            <h4 style={{ marginBottom: '0.2rem' }}>Intern (Department of Robotics)</h4>
+            <p>MCEME • Tirumalgiri, Telangana, India (On-site)</p>
+            <p style={{ marginTop: '0.5rem', fontSize: '0.9rem' }}>Exploring and developing practical solutions in robotics engineering and embedded hardware systems.</p>
+          </div>
           <div className="neo-box bg-white">
             <ul style={{ paddingLeft: '1rem', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
               <li><strong>4th Place</strong> – Gist 2K26 National Hackathon, Sreenidhi Institute of Science and Technology (SNIST)</li>
@@ -201,14 +229,46 @@ export default function Home() {
 
       </section>
 
+      {/* Hardware & Project Gallery */}
+      <section className="animate-slide-up delay-4" style={{ marginBottom: '6rem' }}>
+        <h2 style={{ display: 'inline-block', backgroundColor: 'var(--accent-lime)', padding: '0.5rem 1rem', border: 'var(--border-width) solid var(--border-color)', boxShadow: '4px 4px 0px var(--shadow-color)', marginBottom: '2rem' }}>
+          Hardware & Project Gallery
+        </h2>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '3rem' }}>
+          {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13].map((num) => (
+            <div key={num} className="neo-box bg-white gallery-item" style={{ padding: '0', overflow: 'hidden', borderTop: '8px solid var(--accent-magenta)', position: 'relative', height: '350px', borderRadius: '15px' }}>
+              <Image 
+                src={`/portfolio/image_${num}.webp`} 
+                alt={`Portfolio Image ${num}`} 
+                fill 
+                style={{ objectFit: 'cover' }} 
+              />
+            </div>
+          ))}
+        </div>
+      </section>
+
       {/* Footer */}
-      <footer className="footer-box">
-        <h3 style={{ color: 'var(--accent-yellow)' }}>Declaration</h3>
-        <p style={{ maxWidth: '800px', margin: '0 auto', opacity: 0.9 }}>
-          I hereby declare that all the information provided above is true and correct to the best of my knowledge and belief. No material fact has been concealed, and I take full responsibility for the accuracy of the details provided herein.
-        </p>
-        <div style={{ marginTop: '2rem', fontWeight: 'bold' }}>
-          April 25, 2026 • Hyderabad, India
+      <footer className="footer-box" style={{ padding: '2rem' }}>
+        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1rem' }}>
+          <h3 style={{ margin: 0, fontSize: '1.2rem' }}>Let's Connect</h3>
+          <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', justifyContent: 'center' }}>
+            <a href="mailto:bhruthwik536@gmail.com" className="neo-btn bg-white" style={{ padding: '0.5rem 1rem', fontSize: '1rem', color: 'black', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+              <MdEmail size={18} /> Email
+            </a>
+            <a href="https://github.com/hkharthikeya" target="_blank" rel="noreferrer" className="neo-btn bg-white" style={{ padding: '0.5rem 1rem', fontSize: '1rem', color: 'black', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+              <FaGithub size={18} /> GitHub
+            </a>
+            <a href="https://www.linkedin.com/in/hkharthikeya" target="_blank" rel="noreferrer" className="neo-btn bg-white" style={{ padding: '0.5rem 1rem', fontSize: '1rem', color: 'black', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+              <FaLinkedin size={18} /> LinkedIn
+            </a>
+            <a href="https://www.instagram.com/hkharthikeya" target="_blank" rel="noreferrer" className="neo-btn bg-white" style={{ padding: '0.5rem 1rem', fontSize: '1rem', color: 'black', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+              <FaInstagram size={18} /> Instagram
+            </a>
+          </div>
+          <div style={{ marginTop: '1rem', opacity: 0.7, fontSize: '0.9rem' }}>
+            © {new Date().getFullYear()} Bhimavarapu Hruthwik Kharthikeya. All Rights Reserved.
+          </div>
         </div>
       </footer>
     </div>
