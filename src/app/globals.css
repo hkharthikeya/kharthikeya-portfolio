@@ -283,15 +283,15 @@ a {
 
 /* Custom Neobrutalist Scrollbar */
 ::-webkit-scrollbar {
-  width: 16px;
+  width: 12px;
 }
 ::-webkit-scrollbar-track {
   background: var(--bg-color);
-  border-left: var(--border-width) solid var(--border-color);
+  border-left: 2px solid var(--border-color);
 }
 ::-webkit-scrollbar-thumb {
   background: var(--accent-magenta);
-  border: var(--border-width) solid var(--border-color);
+  border: 2px solid var(--border-color);
 }
 ::-webkit-scrollbar-thumb:hover {
   background: var(--accent-cyan);
