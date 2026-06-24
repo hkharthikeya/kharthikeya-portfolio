@@ -43,7 +43,7 @@ export default function Home() {
         
         {/* Hero Image */}
         <img 
-          src="/portfolio/hero_image.webp" 
+          src="/portfolio/hero_image.jpeg" 
           alt="Bhimavarapu Hruthwik Kharthikeya" 
           className="hero-image-placeholder bg-white animate-slide-up delay-4" 
           style={{ padding: 0, width: '100%', maxWidth: '400px', height: 'auto', objectFit: 'contain', flexShrink: 0 }} 
