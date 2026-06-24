@@ -5,20 +5,20 @@ import Image from 'next/image';
 export default function Home() {
   return (
     <div className="container" style={{ position: 'relative' }}>
-      
-      
+
+
       {/* Hero Section */}
       <section className="hero-section hero-layout" style={{ position: 'relative', zIndex: 1 }}>
         <div className="hero-content">
-          <h1 className="hero-title animate-slide-up">BHIMAVARAPU HRUTHWIK KHARTHIKEYA</h1>
+          <h1 className="hero-title animate-slide-up">BHIMAVARAPU HRUTHWIK KHARTHIKEYA AMMU</h1>
           <p className="hero-subtitle animate-slide-up delay-1">Electronics & IoT Developer</p>
-  
+
           <div className="animate-slide-up delay-2" style={{ marginTop: '2rem', marginBottom: '3rem' }}>
             <p style={{ fontSize: '1.2rem', lineHeight: 1.6, maxWidth: '800px', backgroundColor: 'var(--bg-color)', padding: '1rem', borderLeft: '8px solid var(--accent-magenta)' }}>
               A highly motivated Electronics & Communication Engineering student pushing the boundaries of hardware design, autonomous systems, and embedded logic. Passionate about turning complex circuitry into functional reality.
             </p>
           </div>
-  
+
           <div className="contact-links animate-slide-up delay-3">
             <a href="mailto:bhruthwik536@gmail.com" className="neo-btn neo-btn-cyan" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
               <MdEmail size={20} /> Email Me
@@ -40,13 +40,13 @@ export default function Home() {
             </div>
           </div>
         </div>
-        
+
         {/* Hero Image */}
-        <img 
-          src="/portfolio/hero_image.jpeg" 
-          alt="Bhimavarapu Hruthwik Kharthikeya" 
-          className="hero-image-placeholder bg-white animate-slide-up delay-4" 
-          style={{ padding: 0, width: '100%', maxWidth: '400px', height: 'auto', objectFit: 'contain', flexShrink: 0 }} 
+        <img
+          src="/portfolio/hero_image.jpeg"
+          alt="Bhimavarapu Hruthwik Kharthikeya"
+          className="hero-image-placeholder bg-white animate-slide-up delay-4"
+          style={{ padding: 0, width: '100%', maxWidth: '400px', height: 'auto', objectFit: 'contain', flexShrink: 0 }}
         />
       </section>
 
@@ -237,11 +237,11 @@ export default function Home() {
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '3rem' }}>
           {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13].map((num) => (
             <div key={num} className="neo-box bg-white gallery-item" style={{ padding: '0', overflow: 'hidden', borderTop: '8px solid var(--accent-magenta)', position: 'relative', height: '350px', borderRadius: '15px' }}>
-              <Image 
-                src={`/portfolio/image_${num}.webp`} 
-                alt={`Portfolio Image ${num}`} 
-                fill 
-                style={{ objectFit: 'cover' }} 
+              <Image
+                src={`/portfolio/image_${num}.webp`}
+                alt={`Portfolio Image ${num}`}
+                fill
+                style={{ objectFit: 'cover' }}
               />
             </div>
           ))}
