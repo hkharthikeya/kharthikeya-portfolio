@@ -10,7 +10,7 @@ export default function Home() {
       {/* Hero Section */}
       <section className="hero-section hero-layout" style={{ position: 'relative', zIndex: 1 }}>
         <div className="hero-content">
-          <h1 className="hero-title animate-slide-up">BHIMAVARAPU HRUTHWIK KHARTHIKEYA AMMU</h1>
+          <h1 className="hero-title animate-slide-up">BHIMAVARAPU HRUTHWIK KHARTHIKEYA</h1>
           <p className="hero-subtitle animate-slide-up delay-1">Electronics & IoT Developer</p>
 
           <div className="animate-slide-up delay-2" style={{ marginTop: '2rem', marginBottom: '3rem' }}>
